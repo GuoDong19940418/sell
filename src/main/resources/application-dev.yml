@@ -1,0 +1,67 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.153.129/sell?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+  jackson:
+    default-property-inclusion: non_null
+  redis:
+    host: 192.168.59.129
+    port: 6379
+    password:
+
+#server:
+#  context-path: /sell
+
+
+#wechat:
+#  mpAppId: wx2e5124d8e7699c53
+#  mpAppSecret: 00c39571f1abbce460724fbe25d96524
+#  mchId: XXX
+#  mchKey: XXX
+#  keyPath: /var/weixin_cert/h5.p12
+#  notifyUrl: http://guodongandjava.natapp1.cc/sell/pay/notify
+
+#廖师兄支付测试账号
+wechat:
+  mpAppId: wxd898fcb01713c658
+  mpAppSecret: xxx
+  openAppId: wx6ad144e54af67d87
+  openAppSecret: 91a2ff6d38a2bbccfb7e9f9079108e2e
+  mchId: 1483469312
+  mchKey: C5245D70627C1F8E9964D494B0735025
+  keyPath: C:/Users/Administrator/Desktop/SpringBoot/weixin_cert/h5.p12
+  notifyUrl: http://guodongandjava.natapp1.cc/notify
+  templateId:
+    orderStatus: XXX
+
+#测试消息模板发送
+#wechat:
+#  mpAppId: wx2e5124d8e7699c53
+#  mpAppSecret: 00c39571f1abbce460724fbe25d96524
+#  openAppId: wx6ad144e54af67d87
+#  openAppSecret: 91a2ff6d38a2bbccfb7e9f9079108e2e
+#  mchId: 1483469312
+#  mchKey: C5245D70627C1F8E9964D494B0735025
+#  keyPath: C:/Users/Administrator/Desktop/SpringBoot/weixin_cert/h5.p12
+#  notifyUrl: http://guodongandjava.natapp1.cc/notify
+#  templateId:
+#    orderStatus: lP-g_NWl-c-8hw7vDi6PHTL3BxhC_gStZQ8xxqtg5kM
+
+
+
+projectUrl:
+  wecharMpAuthorize: http://guodongandjava.natapp1.cc
+  wecharOpenAuthorize: http://guodongandjava.natapp1.cc
+  sell: http://guodongandjava.natapp1.cc
+  agencyUrl: https://open.weixin.qq.com/connect/qrconnect?appid=wx6ad144e54af67d87&redirect_uri=http://sell.springboot.cn/sell/qr/oTgZpwYTlHOd99S3hFp7E1x-eLCw&response_type=code&scope=snsapi_login&state=http://guodongandjava.natapp1.cc/wechat/toQrUserInfo
+#mybatis 显示sql语句
+logging:
+  level:
+    com.imooc.dataobject.mapper: trace
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+
